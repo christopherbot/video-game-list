@@ -2,10 +2,8 @@ const systems = [{
   id: '7df51f70-fbc5-42b0-a3ec-e9b86c3b3ff0',
   color: 'Grey',
   description: '',
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }]
 
 const cables = ['AV', 'Power']
@@ -24,10 +22,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: '0a9cc0ef-5809-4798-bf2c-7a7fc2531e32',
   name: 'Champions World Class Soccer',
@@ -38,10 +34,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: '74732c51-b303-467c-a4ad-dfca94fab884',
   name: 'Final Fantasy II',
@@ -52,10 +46,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: 'd050e39c-0a4a-4ea0-bd40-154df45b686c',
   name: 'Final Fantasy III',
@@ -66,10 +58,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: 'b3b1edb4-81ab-40ec-af67-a2774f9a1067',
   name: 'Goof Troop',
@@ -80,10 +70,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: '0b203596-5b2c-4b84-82a0-f394a93966c3',
   name: 'Illusion of Gaia',
@@ -94,10 +82,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: 'dffcc008-b274-4f91-8649-457a94670333',
   name: 'Kirby\'s Avalanche',
@@ -108,10 +94,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: '0c288317-fd09-4367-b05c-265a7435bae8',
   name: 'Ogre Battle: The March of the Black Queen',
@@ -122,10 +106,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: '6136f196-98a7-41f6-86d2-4530e8b331b9',
   name: 'Road Runner\'s Death Valley Rally',
@@ -136,10 +118,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: 'fe6d378c-6a22-4f71-b216-e2715a432a3c',
   name: 'Secret of Mana',
@@ -150,10 +130,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: 'e75ec1f9-c887-4faa-8ecf-00f6e1cdd11a',
   name: 'Soul Blazer',
@@ -164,10 +142,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: 'e48f1a49-ba94-4234-a9fc-9899d14b6acb',
   name: 'Street Fighter II: The World Warrior',
@@ -178,10 +154,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: 'e4ff3a1e-762b-472f-a769-d6db6c169575',
   name: 'Super Mario All Stars',
@@ -192,10 +166,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: 'aefca292-0b87-4b27-a1ac-b43801bd4873',
   name: 'Super Mario Kart',
@@ -206,10 +178,8 @@ const games = [{
   played: true,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: 'b409e639-0873-4d19-b0eb-083801252e7f',
   name: 'Super Mario World',
@@ -220,10 +190,8 @@ const games = [{
   played: true,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: '2a525e01-f18d-4544-9d61-10ac21bc3f2b',
   name: 'WWF Super Wrestlemania',
@@ -234,10 +202,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: '56bff03a-8853-4c07-9d5d-665ad3cdcba9',
   name: 'Ys III: Wanderers from Ys',
@@ -248,10 +214,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: 'a67649ab-3d5c-4426-bc3d-478947be28a1',
   name: 'Zombies Ate My Neighbors',
@@ -262,10 +226,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }]
 
 export default {

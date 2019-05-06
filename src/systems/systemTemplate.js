@@ -2,10 +2,8 @@ const systems = [{
   id: '',
   color: '',
   description: '',
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }]
 
 const cables = []
@@ -24,10 +22,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }]
 
 export default {

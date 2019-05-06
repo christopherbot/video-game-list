@@ -2,10 +2,8 @@ const systems = [{
   id: '3909eeb4-f171-4d6a-be84-2b3bda066944',
   color: 'Grey',
   description: '',
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }]
 
 const cables = ['AV', 'Power']
@@ -24,10 +22,8 @@ const games = [{
   played: true,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: '19b3589c-adf1-46a2-9db5-34bc10d40dd6',
   name: 'Duck Tales',
@@ -38,10 +34,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: 'badb3d00-2202-4615-800a-714a54877c37',
   name: 'Super Mario Bros. / Duck Hunt',
@@ -52,10 +46,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: '3b8049f9-b4f7-4cde-8241-dfe5e3c2245e',
   name: 'The Legend of Zelda',
@@ -66,10 +58,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: '6da91c0e-a1ba-4f80-984c-e7961e21c7ce',
   name: 'The Legend of Zelda: The Adventure of Link',
@@ -80,10 +70,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }]
 
 export default {

@@ -2,18 +2,14 @@ const systems = [{
   id: '65fc7f3f-36cd-4789-84c3-554cd1f0db85',
   color: 'Jungle Green',
   description: '',
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: 'b5c77399-ed55-471b-9f6f-f0ee528dbda9',
   color: 'Black',
   description: '',
-  borrowed: {
-    inFrom: '',
-    outTo: 'Victor',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: 'Victor',
 }]
 
 const cables = ['AV', 'Power']
@@ -38,10 +34,8 @@ const games = [{
   played: true,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: 'e3d68c7d-98c6-4101-bc94-ab111aa5e14b',
   name: '007: The World Is Not Enough',
@@ -52,10 +46,8 @@ const games = [{
   played: true,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: 'c785c34b-958c-4739-ad40-146c5e0dbafe',
   name: 'Asteroids Hyper 64',
@@ -66,10 +58,8 @@ const games = [{
   played: true,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: 'fb73c46b-1108-4df6-a8b8-bd0a4c9ae85b',
   name: 'Banjo Kazooie',
@@ -80,10 +70,8 @@ const games = [{
   played: true,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: 'a84be06e-e6aa-46f9-879c-076202030394',
   name: 'Banjo Tooie',
@@ -94,10 +82,8 @@ const games = [{
   played: true,
   completed: true,
   favourite: true,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: '6e3d4b59-fbac-43b5-8c85-d3f7952c70a9',
   name: 'Blast Corps',
@@ -108,10 +94,8 @@ const games = [{
   played: true,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: 'fc4b0dbe-e92a-4e42-8146-34b160ee1286',
   name: 'Body Harvest',
@@ -122,10 +106,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: 'ffdcc73f-fe2c-45cf-8eec-3133818e4c6f',
   name: 'Bomberman 64',
@@ -136,10 +118,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: '00e03f15-8964-47a4-8536-2098721db2dd',
   name: 'Bomberman Hero',
@@ -150,10 +130,8 @@ const games = [{
   played: true,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: '72408b1c-5ccf-48de-8c9c-679b20120043',
   name: 'Command and Conquer',
@@ -164,10 +142,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: '8ac3a8b1-333a-4be5-8792-00959a0e9288',
   name: 'Conker\'s Bad Fur Day',
@@ -178,10 +154,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: 'b1ff63f0-79d8-4515-8581-07399f866fe7',
   name: 'Donkey Kong 64',
@@ -192,10 +166,8 @@ const games = [{
   played: true,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: 'b7861356-af86-4b9e-b8a0-84696873dd95',
   name: 'Diddy Kong Racing',
@@ -206,10 +178,8 @@ const games = [{
   played: true,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: 'Max',
-    outTo: '???',
-  },
+  borrowedInFrom: 'Max',
+  borrowedOutTo: '???',
 }, {
   id: 'e5212f6d-292a-4158-89df-867c781d8260',
   name: 'Duke Nukem 64',
@@ -220,10 +190,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: '6cfd1f90-5cb2-4278-94c9-11c1a37ce389',
   name: 'Fighter Destiny 2',
@@ -234,10 +202,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: '42817f39-000b-445c-a865-93232dd1d313',
   name: 'Harvest Moon 64',
@@ -248,10 +214,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: '7bc7262c-335c-4230-a226-e84c84f28aa2',
   name: 'Hot Wheels Turbo Racing',
@@ -262,10 +226,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: 'a8e3817f-bf41-4c33-8985-c7130c27ff73',
   name: 'Hey You Pikachu!',
@@ -276,10 +238,8 @@ const games = [{
   played: true,
   completed: true,
   favourite: true,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: 'a922fb06-b46b-4466-95dd-781d252ddfd6',
   name: 'Jet Force Gemini',
@@ -290,10 +250,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: 'c8671cab-aa05-4b7c-8cb6-2c24efcb5cec',
   name: 'Kirby 64: The Crystal Shards',
@@ -304,10 +262,8 @@ const games = [{
   played: true,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: 'Max',
-    outTo: '',
-  },
+  borrowedInFrom: 'Max',
+  borrowedOutTo: '',
 }, {
   id: '64efe26f-1700-4bb2-b909-d34cb5e9ff13',
   name: 'Mario Golf',
@@ -318,10 +274,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: 'Max',
-    outTo: '',
-  },
+  borrowedInFrom: 'Max',
+  borrowedOutTo: '',
 }, {
   id: 'f1128b75-1af7-4398-9515-a53e07fc91ea',
   name: 'Mario Kart',
@@ -332,10 +286,8 @@ const games = [{
   played: true,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: 'Victor',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: 'Victor',
 }, {
   id: '36abd75d-7d3c-4aaf-a545-e8e20aded67a',
   name: 'Mario Party',
@@ -346,10 +298,8 @@ const games = [{
   played: true,
   completed: false,
   favourite: true,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: '2e72498c-a1dd-4dfd-8dfc-170881f65a1f',
   name: 'Mario Party 2',
@@ -360,10 +310,8 @@ const games = [{
   played: true,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: 'a77051d4-3eff-4e5f-9de3-b15d51e3522d',
   name: 'Mario Party 3',
@@ -374,10 +322,8 @@ const games = [{
   played: true,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: '8751edf2-9ec2-414e-958d-b9ea525bce6c',
   name: 'Mario Tennis',
@@ -388,10 +334,8 @@ const games = [{
   played: true,
   completed: true,
   favourite: true,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: '391cac2b-5ec4-49fa-a68b-51609d341d4d',
   name: 'Mega Man 64',
@@ -402,10 +346,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: 'cb55a1c8-1e1b-4ce1-97eb-593646782f36',
   name: 'Mission Impossible',
@@ -416,10 +358,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: 'fe374fb6-d2e0-44fc-b4ae-6ce5f7631d2c',
   name: 'NFL Quarterback Club \'98',
@@ -430,10 +370,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: '6515a4f1-e1b6-4513-831b-3b6ca51802fb',
   name: 'NHL \'99',
@@ -444,10 +382,8 @@ const games = [{
   played: true,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: 'e88ca9e2-b32c-4d75-a760-561509baeb26',
   name: 'Ogre Battle 64: Person of Lordly Caliber',
@@ -458,10 +394,8 @@ const games = [{
   played: true,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: '25a9d84f-be5d-49d3-bd4a-19d25eb850be',
   name: 'Paper Boy',
@@ -472,10 +406,8 @@ const games = [{
   played: true,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: 'd7f4b0ee-19e6-48ee-b6f7-03485b41c358',
   name: 'Paper Mario',
@@ -486,10 +418,8 @@ const games = [{
   played: true,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: 'Max',
-    outTo: '',
-  },
+  borrowedInFrom: 'Max',
+  borrowedOutTo: '',
 }, {
   id: '360785f7-49db-4223-8457-7253da802946',
   name: 'Perfect Dark',
@@ -500,10 +430,8 @@ const games = [{
   played: true,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: '1dd2f8b7-3bdf-4a76-9f85-10dc8746021e',
   name: 'Pokemon Puzzle League',
@@ -514,10 +442,8 @@ const games = [{
   played: true,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: 'Max',
-    outTo: '',
-  },
+  borrowedInFrom: 'Max',
+  borrowedOutTo: '',
 }, {
   id: 'b137019d-acee-45e5-9c76-92e6f0e5f478',
   name: 'Pokemon Snap',
@@ -528,10 +454,8 @@ const games = [{
   played: true,
   completed: true,
   favourite: true,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: '5e2a6846-4f4e-4d17-8b96-8b4499c86867',
   name: 'Pokemon Stadium',
@@ -542,10 +466,8 @@ const games = [{
   played: true,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: '1da5f596-9e49-4cc8-bc1c-2b762c26fc31',
   name: 'Pokemon Stadium 2',
@@ -556,10 +478,8 @@ const games = [{
   played: true,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: 'a57b5566-2459-4f4d-888a-b8b92e1b746f',
   name: 'Quake',
@@ -570,10 +490,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: '0f8b9722-ec3c-4752-bcfb-0f5a8c63da5a',
   name: 'Resident Evil 2',
@@ -584,10 +502,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: 'de6ebce0-d0b8-4206-aac0-a8820553e89c',
   name: 'Shadow Man',
@@ -598,10 +514,8 @@ const games = [{
   played: true,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: 'f43080d3-9d40-49a2-a5dd-e2654f507ff9',
   name: 'Snowboard Kids',
@@ -612,10 +526,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: '9ca08cb2-c128-4c1c-9a4b-4be3ac409428',
   name: 'Snowboard Kids 2',
@@ -626,10 +538,8 @@ const games = [{
   played: true,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: 'b2371cf8-4f5b-4a6b-a4f3-e36b7ba84f6b',
   name: 'Spider-Man',
@@ -640,10 +550,8 @@ const games = [{
   played: true,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: 'Max',
-    outTo: '',
-  },
+  borrowedInFrom: 'Max',
+  borrowedOutTo: '',
 }, {
   id: 'e0df97be-5de8-4dbb-9053-4bca9d206dab',
   name: 'Star Wars Episode I: Racer',
@@ -654,10 +562,8 @@ const games = [{
   played: true,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: '1cec4ff6-af31-451f-9db1-65344b80fc9d',
   name: 'Super Smash Bros',
@@ -668,10 +574,8 @@ const games = [{
   played: true,
   completed: true,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: 'Victor',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: 'Victor',
 }, {
   id: '0dcc78d1-cd68-4fda-a27d-aae573d0f8d1',
   name: 'The Legend of Zelda: Majora\'s Mask',
@@ -682,10 +586,8 @@ const games = [{
   played: true,
   completed: false,
   favourite: true,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: '88c6f730-7110-4d3c-bb93-d1a21b0e5304',
   name: 'The Legend of Zelda: Ocarina of Time',
@@ -696,10 +598,8 @@ const games = [{
   played: true,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: '6f53ce21-d406-433d-a442-499c9843a4c2',
   name: 'Tom Clancy\'s Rainbow Six',
@@ -710,10 +610,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: '476d70fc-1381-47a2-84d9-6348ca25027e',
   name: 'Tony Hawk\'s Pro Skater',
@@ -724,10 +622,8 @@ const games = [{
   played: true,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: '88c18929-9f4f-43a3-b010-b0e41f9dba4f',
   name: 'Tony Hawk\'s Pro Skater 2',
@@ -738,10 +634,8 @@ const games = [{
   played: true,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: '53931c0f-3da0-4c35-a6a5-e2971634130f',
   name: 'Turok 2: Seeds of Evil',
@@ -752,10 +646,8 @@ const games = [{
   played: true,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: '8463a5f8-f278-4bb4-bc56-acd19178aaac',
   name: 'Virtual Pool 64',
@@ -766,10 +658,8 @@ const games = [{
   played: false,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: '249fe414-dab9-4b54-8fc7-a7192213a70a',
   name: 'WWF Wrestlemania 2000',
@@ -780,10 +670,8 @@ const games = [{
   played: true,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: '',
-    outTo: '',
-  },
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }, {
   id: 'da69574f-64de-4e72-9526-ad59d4461ad0',
   name: 'Yoshi\'s Story',
@@ -794,10 +682,8 @@ const games = [{
   played: true,
   completed: false,
   favourite: false,
-  borrowed: {
-    inFrom: 'Max',
-    outTo: '',
-  },
+  borrowedInFrom: 'Max',
+  borrowedOutTo: '',
 }]
 
 export default {
