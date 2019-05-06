@@ -2,13 +2,15 @@ const systems = [{
   id: '',
   color: '',
   description: '',
-  cables: [],
-  accessories: [],
   borrowed: {
     inFrom: '',
     outTo: '',
   },
 }]
+
+const cables = []
+
+const accessories = []
 
 const controllers = []
 
@@ -32,6 +34,8 @@ export default {
   id: '',
   name: '',
   systems,
+  cables,
+  accessories,
   controllers,
   games,
 }

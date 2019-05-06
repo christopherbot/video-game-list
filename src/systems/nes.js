@@ -2,13 +2,15 @@ const systems = [{
   id: '3909eeb4-f171-4d6a-be84-2b3bda066944',
   color: 'Grey',
   description: '',
-  cables: ['AV', 'Power'],
-  accessories: [],
   borrowed: {
     inFrom: '',
     outTo: '',
   },
 }]
+
+const cables = ['AV', 'Power']
+
+const accessories = []
 
 const controllers = ['Classic x2']
 
@@ -88,6 +90,8 @@ export default {
   id: 'b60de999-f860-4ca9-8ede-bdf0424e41ed',
   name: 'NES',
   systems,
+  cables,
+  accessories,
   controllers,
   games,
 }

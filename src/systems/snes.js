@@ -2,13 +2,15 @@ const systems = [{
   id: '7df51f70-fbc5-42b0-a3ec-e9b86c3b3ff0',
   color: 'Grey',
   description: '',
-  cables: ['AV', 'Power'],
-  accessories: [],
   borrowed: {
     inFrom: '',
     outTo: '',
   },
 }]
+
+const cables = ['AV', 'Power']
+
+const accessories = []
 
 const controllers = ['Classic x2']
 
@@ -270,6 +272,8 @@ export default {
   id: '18110ff3-6b1a-485a-bfda-73e6b27d60e6',
   name: 'SNES',
   systems,
+  cables,
+  accessories,
   controllers,
   games,
 }

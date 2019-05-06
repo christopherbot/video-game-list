@@ -2,8 +2,6 @@ const systems = [{
   id: '65fc7f3f-36cd-4789-84c3-554cd1f0db85',
   color: 'Jungle Green',
   description: '',
-  cables: ['AV', 'Power'],
-  accessories: ['Rumble Pak'],
   borrowed: {
     inFrom: '',
     outTo: '',
@@ -12,13 +10,15 @@ const systems = [{
   id: 'b5c77399-ed55-471b-9f6f-f0ee528dbda9',
   color: 'Black',
   description: '',
-  cables: ['AV', 'Power'],
-  accessories: [],
   borrowed: {
     inFrom: '',
     outTo: 'Victor',
   },
 }]
+
+const cables = ['AV', 'Power']
+
+const accessories = ['Rumble Pak']
 
 const controllers = [
   'Grey x2',
@@ -804,6 +804,8 @@ export default {
   id: 'cd1e21b6-61fd-412b-b264-d31d5c1f90c3',
   name: '',
   systems,
+  cables,
+  accessories,
   controllers,
   games,
 }
