@@ -13,18 +13,6 @@ const accessories = ['Gamepad charging cradle']
 const controllers = ['Gamepad']
 
 const games = [{
-  id: 'df366c6b-6cba-4b40-ae31-705695a9418a',
-  name: 'Super Smash Bros. 4',
-  receiptLocation: '',
-  url: 'https://en.wikipedia.org/wiki/Super_Smash_Bros._for_Nintendo_3DS_and_Wii_U',
-  price: 0,
-  extras: [],
-  played: true,
-  completed: true,
-  favourite: false,
-  borrowedInFrom: '',
-  borrowedOutTo: '',
-}, {
   id: '4109b0dc-37a0-425c-af56-c99fb9d0e73d',
   name: 'The Legend of Zelda: Breath of the Wild',
   receiptLocation: '',
@@ -34,6 +22,18 @@ const games = [{
   played: true,
   completed: true,
   favourite: true,
+  borrowedInFrom: '',
+  borrowedOutTo: '',
+}, {
+  id: 'df366c6b-6cba-4b40-ae31-705695a9418a',
+  name: 'Super Smash Bros. 4',
+  receiptLocation: '',
+  url: 'https://en.wikipedia.org/wiki/Super_Smash_Bros._for_Nintendo_3DS_and_Wii_U',
+  price: 0,
+  extras: [],
+  played: true,
+  completed: true,
+  favourite: false,
   borrowedInFrom: '',
   borrowedOutTo: '',
 }, {
