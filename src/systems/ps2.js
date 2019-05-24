@@ -237,7 +237,7 @@ const games = [{
 }, {
   id: '8d5e53c9-87bd-413b-921a-3de9f5e3fafc',
   name: 'Final Fantasy XI Online',
-  receiptLocation: 'Silver case',
+  receiptLocation: '(Silver case)',
   url: 'https://en.wikipedia.org/wiki/Final_Fantasy_XI',
   price: 0,
   extras: [],
@@ -345,7 +345,7 @@ const games = [{
 }, {
   id: '10984120-3649-4413-abba-06761fe30ec2',
   name: 'Growlanser Generaions',
-  receiptLocation: 'Mac Game Guy',
+  receiptLocation: '(Mac Game Guy)',
   url: 'https://en.wikipedia.org/wiki/Growlanser_Generations',
   price: 0,
   extras: [],
@@ -441,7 +441,7 @@ const games = [{
 }, {
   id: 'b06be297-0edd-4f32-b6ad-d88db3ee5230',
   name: 'Legaia 2: Duel Saga',
-  receiptLocation: 'Mac Game Guy',
+  receiptLocation: '(Mac Game Guy)',
   url: 'https://en.wikipedia.org/wiki/Legaia_2:_Duel_Saga',
   price: 0,
   extras: [],
@@ -621,7 +621,7 @@ const games = [{
 }, {
   id: '4fb1544a-3f08-42e1-b7d9-39f55ae40ba0',
   name: 'Persona 3 FES',
-  receiptLocation: 'Mac Game Guy',
+  receiptLocation: '(Mac Game Guy)',
   url: 'https://en.wikipedia.org/wiki/Persona_3',
   price: 0,
   extras: [],
@@ -1065,7 +1065,7 @@ const games = [{
 }, {
   id: '3cfb358c-a7d9-470e-8025-7d8ca9c34021',
   name: 'Wild Arms 5',
-  receiptLocation: 'Mac Game Guy',
+  receiptLocation: '(Mac Game Guy)',
   url: 'https://en.wikipedia.org/wiki/Wild_Arms_5',
   price: 0,
   extras: [],
@@ -1101,7 +1101,7 @@ const games = [{
 }, {
   id: '1755e4d8-a5a6-43c1-ba74-8a470869ef13',
   name: 'Xenosaga Episode III: Also Sprach Zarathustra',
-  receiptLocation: 'Mac Game Guy',
+  receiptLocation: '(Mac Game Guy)',
   url: 'https://en.wikipedia.org/wiki/Xenosaga_Episode_III',
   price: 0,
   extras: [],

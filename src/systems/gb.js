@@ -129,7 +129,7 @@ const games = [{
 }, {
   id: 'b237684d-db9a-461a-b616-999904817e76',
   name: 'Final Fantasy Legend II',
-  receiptLocation: 'Silver case',
+  receiptLocation: '(Silver case)',
   url: 'https://en.wikipedia.org/wiki/Final_Fantasy_Legend_II',
   price: 0,
   extras: [],

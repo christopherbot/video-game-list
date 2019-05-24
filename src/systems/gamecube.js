@@ -45,7 +45,7 @@ const games = [{
 }, {
   id: '35ce1ef7-e101-4d75-8bb2-2ef96b95d663',
   name: 'Crash Bandicoot: The Wrath of Cortex',
-  receiptLocation: 'Silver case',
+  receiptLocation: '(Silver case)',
   url: 'https://en.wikipedia.org/wiki/Crash_Bandicoot:_The_Wrath_of_Cortex',
   price: 0,
   extras: [],

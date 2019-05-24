@@ -171,7 +171,7 @@ const games = [{
 }, {
   id: 'aefca292-0b87-4b27-a1ac-b43801bd4873',
   name: 'Super Mario Kart',
-  receiptLocation: 'Silver case',
+  receiptLocation: '(Silver case)',
   url: 'https://en.wikipedia.org/wiki/Super_Mario_Kart',
   price: 0,
   extras: [],
