@@ -6,7 +6,7 @@ const systems = [{
   borrowedOutTo: '',
 }]
 
-const cables = ['AV', 'Power']
+const cables = ['Power', 'AV']
 
 const accessories = ['Sensor bar']
 

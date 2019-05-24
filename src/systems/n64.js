@@ -12,7 +12,7 @@ const systems = [{
   borrowedOutTo: 'Victor',
 }]
 
-const cables = ['AV', 'Power']
+const cables = ['Power', 'AV']
 
 const accessories = ['Rumble Pak']
 
