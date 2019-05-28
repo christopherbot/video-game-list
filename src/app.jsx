@@ -18,6 +18,11 @@ const Wrapper = styled.main`
     margin-top: 0;
     color: #444;
   }
+
+  a {
+    text-decoration: none;
+    margin-left: 5px;
+  }
 `
 
 export default class extends PureComponent {
@@ -73,7 +78,12 @@ export default class extends PureComponent {
                 {
                   system.games.map(game =>
                     <div key={game.id}>
-                      { game.name }
+                      <span>
+                        { game.name }
+                      </span>
+                      <a href={game.url} target="_blank" rel="noopener noreferrer">
+                        🔗
+                      </a>
                     </div>
                   )
                 }
