@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 import styled from 'styled-components'
 import GlobalStyle from './globalStyle'
 import systems from './systems'
@@ -26,6 +26,19 @@ const Wrapper = styled.main`
 `
 
 const App = () => {
+  const [searchValue, setSearchValue] = useState('')
+  const onSearchChange = ({ target }) => setSearchValue(target.value)
+
+  const filteredGamesBySystemId = systems.reduce((gamesBySystemId, system) => {
+    gamesBySystemId[system.id] = system.games.filter(({ name }) => {
+      return searchValue
+        .split(' ')
+        .every(value => name.toLowerCase().includes(value.toLowerCase()))
+    })
+
+    return gamesBySystemId
+  }, {})
+
   return (
     <Fragment>
       <GlobalStyle />
@@ -35,6 +48,12 @@ const App = () => {
             Video Game List
           </h1>
         </header>
+        <input
+          type="text"
+          placeholder="Search for a game"
+          value={searchValue}
+          onChange={onSearchChange}
+        />
         {
           systems.map(system =>
             <article key={system.id}>
@@ -75,7 +94,7 @@ const App = () => {
               }
               <Bold>Games:</Bold>
               {
-                system.games.map(game =>
+                filteredGamesBySystemId[system.id].map(game =>
                   <div key={game.id}>
                     <span>
                       { game.name }
