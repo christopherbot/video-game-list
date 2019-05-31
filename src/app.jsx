@@ -25,15 +25,48 @@ const Wrapper = styled.main`
   }
 `
 
+const buttonColor = ({ state }) => {
+  switch (state) {
+    case 1:
+      return 'green'
+    case 2:
+      return 'red'
+    default:
+      return 'grey'
+  }
+}
+
+const Button = styled.button`
+  background-color: ${buttonColor};
+`
+
+const buttonFilterStates = {
+  0: null,
+  1: true,
+  2: false,
+}
+
 const App = () => {
   const [searchValue, setSearchValue] = useState('')
+  const [isPlayed, setIsPlayed] = useState(0)
+  const [isCompleted, setIsCompleted] = useState(0)
+  const [isFavourite, setIsFavourite] = useState(0)
+
   const onSearchChange = ({ target }) => setSearchValue(target.value)
 
+  const onToggleIsPlayed = () => setIsPlayed((isPlayed + 1) % Object.keys(buttonFilterStates).length)
+  const onToggleIsCompleted = () => setIsCompleted((isCompleted + 1) % Object.keys(buttonFilterStates).length)
+  const onToggleIsFavourite = () => setIsFavourite((isFavourite + 1) % Object.keys(buttonFilterStates).length)
+
+  const searchValues = searchValue.split(' ')
   const filteredGamesBySystemId = systems.reduce((gamesBySystemId, system) => {
-    gamesBySystemId[system.id] = system.games.filter(({ name }) => {
-      return searchValue
-        .split(' ')
-        .every(value => name.toLowerCase().includes(value.toLowerCase()))
+    gamesBySystemId[system.id] = system.games.filter((game) => {
+      const matchesName = searchValues.every(value => game.name.toLowerCase().includes(value.toLowerCase()))
+      const matchesPlayed = isPlayed === 0 ? true : game.played === buttonFilterStates[isPlayed]
+      const matchesCompleted = isCompleted === 0 ? true : game.completed === buttonFilterStates[isCompleted]
+      const matchesFavourite = isFavourite === 0 ? true : game.favourite === buttonFilterStates[isFavourite]
+
+      return matchesName && matchesPlayed && matchesCompleted && matchesFavourite
     })
 
     return gamesBySystemId
@@ -54,6 +87,9 @@ const App = () => {
           value={searchValue}
           onChange={onSearchChange}
         />
+        <Button state={isPlayed} onClick={onToggleIsPlayed}>Played</Button>
+        <Button state={isCompleted} onClick={onToggleIsCompleted}>Completed</Button>
+        <Button state={isFavourite} onClick={onToggleIsFavourite}>Favourite</Button>
         {
           systems.map(system =>
             <article key={system.id}>
