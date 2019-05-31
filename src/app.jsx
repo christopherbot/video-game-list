@@ -87,6 +87,7 @@ const App = () => {
           value={searchValue}
           onChange={onSearchChange}
         />
+        { Object.values(filteredGamesBySystemId).flat().length } games found.
         <Button state={isPlayed} onClick={onToggleIsPlayed}>Played</Button>
         <Button state={isCompleted} onClick={onToggleIsCompleted}>Completed</Button>
         <Button state={isFavourite} onClick={onToggleIsFavourite}>Favourite</Button>
