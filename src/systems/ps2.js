@@ -237,7 +237,7 @@ const games = [{
 }, {
   id: '8d5e53c9-87bd-413b-921a-3de9f5e3fafc',
   name: 'Final Fantasy XI Online',
-  receiptLocation: '(Silver case)',
+  receiptLocation: '(Brown envelope)',
   url: 'https://en.wikipedia.org/wiki/Final_Fantasy_XI',
   price: 0,
   extras: [],

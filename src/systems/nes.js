@@ -15,7 +15,7 @@ const controllers = ['Classic x2']
 const games = [{
   id: '1fb7104c-5ee0-4a5a-a8f6-c125766f09c4',
   name: 'Double Dragon III',
-  receiptLocation: '(Silver case)',
+  receiptLocation: '(Brown envelope)',
   url: 'https://en.wikipedia.org/wiki/Double_Dragon_III:_The_Sacred_Stones',
   price: 0,
   extras: [],
@@ -39,7 +39,7 @@ const games = [{
 }, {
   id: '3b8049f9-b4f7-4cde-8241-dfe5e3c2245e',
   name: 'The Legend of Zelda',
-  receiptLocation: '(Silver case)',
+  receiptLocation: '(Brown envelope)',
   url: 'https://en.wikipedia.org/wiki/The_Legend_of_Zelda_(video_game)',
   price: 0,
   extras: [],

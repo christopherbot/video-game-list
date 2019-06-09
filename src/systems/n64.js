@@ -207,7 +207,7 @@ const games = [{
 }, {
   id: '42817f39-000b-445c-a865-93232dd1d313',
   name: 'Harvest Moon 64',
-  receiptLocation: '(Silver case)',
+  receiptLocation: '(Brown envelope)',
   url: 'https://en.wikipedia.org/wiki/Harvest_Moon_64',
   price: 0,
   extras: [],
@@ -411,7 +411,7 @@ const games = [{
 }, {
   id: 'e88ca9e2-b32c-4d75-a760-561509baeb26',
   name: 'Ogre Battle 64: Person of Lordly Caliber',
-  receiptLocation: '(Silver case)',
+  receiptLocation: '(Brown envelope)',
   url: 'https://en.wikipedia.org/wiki/Ogre_Battle_64:_Person_of_Lordly_Caliber',
   price: 0,
   extras: [],
@@ -531,7 +531,7 @@ const games = [{
 }, {
   id: 'de6ebce0-d0b8-4206-aac0-a8820553e89c',
   name: 'Shadow Man',
-  receiptLocation: '(Silver case - big sheet)',
+  receiptLocation: '(Brown envelope - big sheet)',
   url: 'https://en.wikipedia.org/wiki/Shadow_Man_(video_game)',
   price: 0,
   extras: [],

@@ -81,7 +81,7 @@ const games = [{
 }, {
   id: 'c2d4f632-5226-442e-b160-0011b8a6c8ae',
   name: 'Castlevania: Circle of the Moon',
-  receiptLocation: '(Silver case)',
+  receiptLocation: '(Brown envelope)',
   url: 'https://en.wikipedia.org/wiki/Castlevania:_Circle_of_the_Moon',
   price: 0,
   extras: [],
@@ -93,7 +93,7 @@ const games = [{
 }, {
   id: 'ffe1a56f-6a75-4c55-9627-a154bcc1fd8b',
   name: 'Classic NES Series: Bomberman',
-  receiptLocation: '(Silver case)',
+  receiptLocation: '(Brown envelope)',
   url: 'https://en.wikipedia.org/wiki/List_of_Classic_NES_Series_games',
   price: 0,
   extras: [],
@@ -105,7 +105,7 @@ const games = [{
 }, {
   id: '1cb5aeb5-b57a-4f2a-ba41-14139b8df51b',
   name: 'Classic NES Series: Ice Climbers',
-  receiptLocation: '(Silver case)',
+  receiptLocation: '(Brown envelope)',
   url: 'https://en.wikipedia.org/wiki/List_of_Classic_NES_Series_games',
   price: 0,
   extras: [],
@@ -117,7 +117,7 @@ const games = [{
 }, {
   id: '81b15ff1-0b7a-44db-a826-8926d56299ef',
   name: 'Crash Bandicoot: The Huge Adventure',
-  receiptLocation: '(Silver case)',
+  receiptLocation: '(Brown envelope)',
   url: 'https://en.wikipedia.org/wiki/Crash_Bandicoot:_The_Huge_Adventure',
   price: 0,
   extras: [],
@@ -129,7 +129,7 @@ const games = [{
 }, {
   id: 'afd2c69c-9591-41d4-a96d-b5d774374eb3',
   name: 'Crash Bandicoot 2: N-Tranced',
-  receiptLocation: '(Silver case)',
+  receiptLocation: '(Brown envelope)',
   url: 'https://en.wikipedia.org/wiki/Crash_Bandicoot_2:_N-Tranced',
   price: 0,
   extras: [],
@@ -153,7 +153,7 @@ const games = [{
 }, {
   id: '72f3a32e-5913-4bef-b87a-5ab67340711a',
   name: 'Donkey Kong Country Advance',
-  receiptLocation: '(Silver case)',
+  receiptLocation: '(Brown envelope)',
   url: 'https://en.wikipedia.org/wiki/Donkey_Kong_Country#Re-releases',
   price: 0,
   extras: [],
@@ -165,7 +165,7 @@ const games = [{
 }, {
   id: '161bd387-74ee-4d29-a178-4e3584a19972',
   name: 'Donkey Kong Country Advance 2: Diddy\'s Kong Quest',
-  receiptLocation: '(Silver case)',
+  receiptLocation: '(Brown envelope)',
   url: 'https://en.wikipedia.org/wiki/Donkey_Kong_Country_2:_Diddy%27s_Kong_Quest#Sequels_and_re-releases',
   price: 0,
   extras: [],
@@ -177,7 +177,7 @@ const games = [{
 }, {
   id: '947db829-598a-44a3-a9e2-3ac12ae5f1db',
   name: 'Dragon Ball Z: The Legacy of Goku II',
-  receiptLocation: '(Silver case)',
+  receiptLocation: '(Brown envelope)',
   url: 'https://en.wikipedia.org/wiki/Dragon_Ball_Z:_The_Legacy_of_Goku_(series)',
   price: 0,
   extras: [],
@@ -201,7 +201,7 @@ const games = [{
 }, {
   id: '5191edbb-5bf2-4899-9d01-66bfe9ff8ca7',
   name: 'Dr. Mario & Puzzle League',
-  receiptLocation: '(Silver case)',
+  receiptLocation: '(Brown envelope)',
   url: 'https://www.mariowiki.com/Dr._Mario_%26_Puzzle_League',
   price: 0,
   extras: [],
@@ -225,7 +225,7 @@ const games = [{
 }, {
   id: '778b70c9-016c-4a8f-aa2c-70619b145b7c',
   name: 'Final Fantasy I & II: Dawn of Souls',
-  receiptLocation: '(Silver case)',
+  receiptLocation: '(Brown envelope)',
   url: 'https://en.wikipedia.org/wiki/Final_Fantasy_(video_game)#Versions_and_re-releases',
   price: 0,
   extras: [],
@@ -285,7 +285,7 @@ const games = [{
 }, {
   id: '6ac062a7-ae0b-48e6-9f3a-80653fc41c95',
   name: 'Fire Emblem: The Sacred Stones',
-  receiptLocation: '(Silver case)',
+  receiptLocation: '(Brown envelope)',
   url: 'https://en.wikipedia.org/wiki/Fire_Emblem:_The_Sacred_Stones',
   price: 0,
   extras: [],
@@ -393,7 +393,7 @@ const games = [{
 }, {
   id: '45c11157-77b9-4ad3-a4bb-ff56bd7b6c98',
   name: 'The Legend of Zelda: A Link To The Past and Four Swords',
-  receiptLocation: '(Silver case)',
+  receiptLocation: '(Brown envelope)',
   url: 'https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_A_Link_to_the_Past_and_Four_Swords',
   price: 0,
   extras: [],
@@ -417,7 +417,7 @@ const games = [{
 }, {
   id: 'c3f306de-8b90-4436-bfc1-b519a3fc460d',
   name: 'Lord of the Rings: Two Towers',
-  receiptLocation: '(Silver case)',
+  receiptLocation: '(Brown envelope)',
   url: 'https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Two_Towers_(video_game)',
   price: 0,
   extras: [],
@@ -429,7 +429,7 @@ const games = [{
 }, {
   id: 'defba076-d348-4547-ade6-fac73ff9ded8',
   name: 'Lord of the Rings: Return of the King',
-  receiptLocation: '(Silver case)',
+  receiptLocation: '(Brown envelope)',
   url: 'https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Return_of_the_King_(video_game)',
   price: 0,
   extras: [],
@@ -465,7 +465,7 @@ const games = [{
 }, {
   id: '7c5ee2ee-55d8-4a2c-885c-46c98faa1619',
   name: 'Mario Party Advance',
-  receiptLocation: '(Silver case)',
+  receiptLocation: '(Brown envelope)',
   url: 'https://en.wikipedia.org/wiki/Mario_Party_Advance',
   price: 0,
   extras: [],
@@ -501,7 +501,7 @@ const games = [{
 }, {
   id: 'f6889944-2359-4a2f-bb2e-4ae87b515f0d',
   name: 'Mega Man Battle Network 2',
-  receiptLocation: '(Silver case)',
+  receiptLocation: '(Brown envelope)',
   url: 'https://en.wikipedia.org/wiki/Mega_Man_Battle_Network_2',
   price: 0,
   extras: [],
@@ -621,7 +621,7 @@ const games = [{
 }, {
   id: '9dfdbd54-d5e2-42e4-a85a-c7a0fbaf5fbd',
   name: 'Metroid: Zero Mission',
-  receiptLocation: '(Silver case)',
+  receiptLocation: '(Brown envelope)',
   url: 'https://en.wikipedia.org/wiki/Metroid:_Zero_Mission',
   price: 0,
   extras: [],
@@ -753,7 +753,7 @@ const games = [{
 }, {
   id: 'dc760e55-2f4d-4673-8711-cb187db9ded6',
   name: 'The Sims 2',
-  receiptLocation: '(Silver case)',
+  receiptLocation: '(Brown envelope)',
   url: 'https://en.wikipedia.org/wiki/The_Sims_2#Game_Boy_Advance_version',
   price: 0,
   extras: [],
@@ -777,7 +777,7 @@ const games = [{
 }, {
   id: '09e5d91a-6947-40d0-98a1-7f8107f21e4d',
   name: 'Sonic Advance 3',
-  receiptLocation: '(Silver case)',
+  receiptLocation: '(Brown envelope)',
   url: 'https://en.wikipedia.org/wiki/Sonic_Advance_3',
   price: 0,
   extras: [],
@@ -861,7 +861,7 @@ const games = [{
 }, {
   id: 'f3dcd672-6d3c-4ea9-a8bb-2ca4fb5e9bc6',
   name: 'Super Mario Advance 3: Yoshi\'s Island ',
-  receiptLocation: '(Silver case)',
+  receiptLocation: '(Brown envelope)',
   url: 'https://en.wikipedia.org/wiki/Yoshi%27s_Island#Development_and_rerelease',
   price: 0,
   extras: [],
@@ -909,7 +909,7 @@ const games = [{
 }, {
   id: '948bfe29-3a4e-46b8-8cdb-bebc0c1d1c59',
   name: 'Sword of Mana',
-  receiptLocation: '(Silver case)',
+  receiptLocation: '(Brown envelope)',
   url: 'https://en.wikipedia.org/wiki/Sword_of_Mana',
   price: 0,
   extras: [],
