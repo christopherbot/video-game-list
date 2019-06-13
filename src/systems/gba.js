@@ -93,7 +93,7 @@ const games = [{
 }, {
   id: 'ffe1a56f-6a75-4c55-9627-a154bcc1fd8b',
   name: 'Classic NES Series: Bomberman',
-  receiptLocation: '(Brown envelope)',
+  receiptLocation: 'Final Fantasy XI Online',
   url: 'https://en.wikipedia.org/wiki/List_of_Classic_NES_Series_games',
   price: 0,
   extras: [],
@@ -129,7 +129,7 @@ const games = [{
 }, {
   id: 'afd2c69c-9591-41d4-a96d-b5d774374eb3',
   name: 'Crash Bandicoot 2: N-Tranced',
-  receiptLocation: '(Brown envelope)',
+  receiptLocation: 'Final Fantasy XI Online',
   url: 'https://en.wikipedia.org/wiki/Crash_Bandicoot_2:_N-Tranced',
   price: 0,
   extras: [],
@@ -621,7 +621,7 @@ const games = [{
 }, {
   id: '9dfdbd54-d5e2-42e4-a85a-c7a0fbaf5fbd',
   name: 'Metroid: Zero Mission',
-  receiptLocation: '(Brown envelope)',
+  receiptLocation: 'Final Fantasy XI Online',
   url: 'https://en.wikipedia.org/wiki/Metroid:_Zero_Mission',
   price: 0,
   extras: [],

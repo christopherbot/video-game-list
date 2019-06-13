@@ -45,7 +45,7 @@ const games = [{
 }, {
   id: '35ce1ef7-e101-4d75-8bb2-2ef96b95d663',
   name: 'Crash Bandicoot: The Wrath of Cortex',
-  receiptLocation: '(Brown envelope)',
+  receiptLocation: 'Final Fantasy XI Online',
   url: 'https://en.wikipedia.org/wiki/Crash_Bandicoot:_The_Wrath_of_Cortex',
   price: 0,
   extras: [],
@@ -453,7 +453,7 @@ const games = [{
 }, {
   id: '319f29b3-c831-45b0-8fc4-9e877847ccea',
   name: 'Spyro: Enter The Dragonfly',
-  receiptLocation: '',
+  receiptLocation: 'Final Fantasy XI Online',
   url: 'https://en.wikipedia.org/wiki/Spyro:_Enter_the_Dragonfly',
   price: 0,
   extras: [],
