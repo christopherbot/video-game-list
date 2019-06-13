@@ -131,7 +131,7 @@ const games = [{
   name: 'Final Fantasy Legend II',
   receiptLocation: '(Brown envelope)',
   url: 'https://en.wikipedia.org/wiki/Final_Fantasy_Legend_II',
-  price: 0,
+  price: 30,
   extras: [],
   played: false,
   completed: false,

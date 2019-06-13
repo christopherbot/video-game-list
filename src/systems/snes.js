@@ -173,7 +173,7 @@ const games = [{
   name: 'Super Mario Kart',
   receiptLocation: '(Brown envelope - big sheet)',
   url: 'https://en.wikipedia.org/wiki/Super_Mario_Kart',
-  price: 0,
+  price: 30,
   extras: [],
   played: true,
   completed: false,
