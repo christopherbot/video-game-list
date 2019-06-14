@@ -25,6 +25,12 @@ const Wrapper = styled.main`
   }
 `
 
+const Info = styled.div`
+  transition: max-height 400ms ease;
+  max-height: ${props => props.show ? '500px' : 0};
+  overflow: hidden;
+`
+
 const buttonColor = ({ state }) => {
   switch (state) {
     case 1:
@@ -57,6 +63,9 @@ const App = () => {
   const onToggleIsPlayed = () => setIsPlayed((isPlayed + 1) % Object.keys(buttonFilterStates).length)
   const onToggleIsCompleted = () => setIsCompleted((isCompleted + 1) % Object.keys(buttonFilterStates).length)
   const onToggleIsFavourite = () => setIsFavourite((isFavourite + 1) % Object.keys(buttonFilterStates).length)
+
+  const [isSystemInfoDisplayed, setIsSystemInfoDisplayed] = useState(false)
+  const onToggleSystemInfoDisplay = () => setIsSystemInfoDisplayed(!isSystemInfoDisplayed)
 
   const searchValues = searchValue.split(' ')
   const filteredGamesBySystemId = systems.reduce((gamesBySystemId, system) => {
@@ -96,40 +105,44 @@ const App = () => {
             <article key={system.id}>
               <h2>
                 { system.name }
+                <button onClick={onToggleSystemInfoDisplay}>
+                  { isSystemInfoDisplayed ? '^' : 'v' }
+                </button>
               </h2>
-              <Bold>Systems:</Bold>
-              {
-                system.systems.map(sys =>
-                  <div key={sys.id}>
-                    { sys.description && `${sys.description} -` } { sys.color }
-                  </div>
-                )
-              }
-              <Bold>Cables:</Bold>
-              {
-                system.cables.map(cable =>
-                  <div key={cable}>
-                    { cable }
-                  </div>
-                )
-              }
-              <Bold>Accessories:</Bold>
-              {
-                system.accessories.map(accessory =>
-                  <div key={accessory}>
-                    { accessory }
-                  </div>
-                )
-              }
-              <Bold>Controllers:</Bold>
-              {
-                system.controllers.map(controller =>
-                  <div key={controller}>
-                    { controller }
-                  </div>
-                )
-              }
-              <Bold>Games:</Bold>
+              <Info show={isSystemInfoDisplayed}>
+                <Bold>Systems:</Bold>
+                {
+                  system.systems.map(sys =>
+                    <div key={sys.id}>
+                      { sys.description && `${sys.description} -` } { sys.color }
+                    </div>
+                  )
+                }
+                <Bold>Cables:</Bold>
+                {
+                  system.cables.map(cable =>
+                    <div key={cable}>
+                      { cable }
+                    </div>
+                  )
+                }
+                <Bold>Accessories:</Bold>
+                {
+                  system.accessories.map(accessory =>
+                    <div key={accessory}>
+                      { accessory }
+                    </div>
+                  )
+                }
+                <Bold>Controllers:</Bold>
+                {
+                  system.controllers.map(controller =>
+                    <div key={controller}>
+                      { controller }
+                    </div>
+                  )
+                }
+              </Info>
               {
                 filteredGamesBySystemId[system.id].map(game =>
                   <div key={game.id}>
