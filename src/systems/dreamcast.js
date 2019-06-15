@@ -161,6 +161,7 @@ const games = [{
 export default {
   id: '37ac7333-b2ec-4748-bf59-d263200cf9a0',
   name: 'Dreamcast',
+  index: 15,
   systems,
   cables,
   accessories,

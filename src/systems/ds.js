@@ -467,6 +467,7 @@ const games = [{
 export default {
   id: '4ad042aa-640b-4437-ba55-0a7226901ba3',
   name: 'DS',
+  index: 8,
   systems,
   cables,
   accessories,

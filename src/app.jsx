@@ -2,6 +2,7 @@ import React, { Fragment, useState } from 'react'
 import styled from 'styled-components'
 import GlobalStyle from './globalStyle'
 import systems from './systems'
+const sortedSystems = systems.sort((a, b) => { console.log('sorting'); return a.index - b.index })
 
 const Bold = styled.h4`
   margin: 0;
@@ -68,7 +69,7 @@ const App = () => {
   const onToggleSystemInfoDisplay = () => setIsSystemInfoDisplayed(!isSystemInfoDisplayed)
 
   const searchValues = searchValue.split(' ')
-  const filteredGamesBySystemId = systems.reduce((gamesBySystemId, system) => {
+  const filteredGamesBySystemId = sortedSystems.reduce((gamesBySystemId, system) => {
     gamesBySystemId[system.id] = system.games.filter((game) => {
       const matchesName = searchValues.every(value => game.name.toLowerCase().includes(value.toLowerCase()))
       const matchesPlayed = isPlayed === 0 ? true : game.played === buttonFilterStates[isPlayed]
@@ -101,7 +102,7 @@ const App = () => {
         <Button state={isCompleted} onClick={onToggleIsCompleted}>Completed</Button>
         <Button state={isFavourite} onClick={onToggleIsFavourite}>Favourite</Button>
         {
-          systems.map(system =>
+          sortedSystems.map(system =>
             <article key={system.id}>
               <h2>
                 { system.name }

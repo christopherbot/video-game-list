@@ -155,6 +155,7 @@ const games = [{
 export default {
   id: '9dae8f3f-1de4-407e-9c68-b54dd7950199',
   name: 'PC',
+  index: 16,
   systems,
   cables,
   accessories,

@@ -503,6 +503,7 @@ const games = [{
 export default {
   id: '3b9dd6fa-8b04-408e-b302-50315d8daa6c',
   name: 'Game Boy',
+  index: 6,
   systems,
   cables,
   accessories,

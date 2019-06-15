@@ -281,6 +281,7 @@ const games = [{
 export default {
   id: 'd9491814-d564-49cc-b299-ef8da1a19ea8',
   name: 'PSP (PlayStation Portable)',
+  index: 14,
   systems,
   cables,
   accessories,

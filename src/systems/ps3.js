@@ -353,6 +353,7 @@ const games = [{
 export default {
   id: '85b6c75e-6101-4e51-9e17-07e6beecffb5',
   name: 'PS3 (PlayStation 3)',
+  index: 12,
   systems,
   cables,
   accessories,

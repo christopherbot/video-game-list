@@ -1127,6 +1127,7 @@ const games = [{
 export default {
   id: '3e29eafa-2268-4007-83ae-00a0d5136f68',
   name: 'PS2 (PlayStation 2)',
+  index: 11,
   systems,
   cables,
   accessories,

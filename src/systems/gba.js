@@ -1007,6 +1007,7 @@ const games = [{
 export default {
   id: '286e78dd-936e-4d5b-89ce-086277b0d7ce',
   name: 'Game Boy Advance',
+  index: 7,
   systems,
   cables,
   accessories,

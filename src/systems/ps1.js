@@ -521,6 +521,7 @@ const games = [{
 export default {
   id: '6117732e-9cef-4d24-b974-235ba823a758',
   name: 'PS1 (PlayStation)',
+  index: 10,
   systems,
   cables,
   accessories,
