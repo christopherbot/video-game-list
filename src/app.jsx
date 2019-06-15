@@ -32,6 +32,10 @@ const Info = styled.div`
   overflow: hidden;
 `
 
+const PlayIcon = styled.span.attrs({ children: '▶' })` color: navy;`
+const CompletedIcon = styled.span.attrs({ children: '✓' })` color: green;`
+const FavouriteIcon = styled.span.attrs({ children: '✰' })` color: gold;`
+
 const buttonColor = ({ state }) => {
   switch (state) {
     case 1:
@@ -153,6 +157,9 @@ const App = () => {
                     <a href={game.url} target="_blank" rel="noopener noreferrer">
                       🔗
                     </a>
+                    { game.played && <PlayIcon /> }
+                    { game.completed && <CompletedIcon /> }
+                    { game.favourite && <FavouriteIcon /> }
                   </div>
                 )
               }
