@@ -15,6 +15,10 @@ const Wrapper = styled.main`
   padding: 50px;
   background-color: #ddeae3;
 
+  h2 {
+    display: inline-block;
+  }
+
   p {
     margin-top: 0;
     color: #444;
@@ -23,6 +27,10 @@ const Wrapper = styled.main`
   a {
     text-decoration: none;
     margin-left: 5px;
+  }
+
+  button {
+    margin: 0 5px;
   }
 `
 
@@ -101,19 +109,22 @@ const App = () => {
           value={searchValue}
           onChange={onSearchChange}
         />
-        { Object.values(filteredGamesBySystemId).flat().length } games found.
         <Button state={isPlayed} onClick={onToggleIsPlayed}>Played</Button>
         <Button state={isCompleted} onClick={onToggleIsCompleted}>Completed</Button>
         <Button state={isFavourite} onClick={onToggleIsFavourite}>Favourite</Button>
+        { Object.values(filteredGamesBySystemId).flat().length } games
         {
           sortedSystems.map(system =>
             <article key={system.id}>
               <h2>
                 { system.name }
-                <button onClick={onToggleSystemInfoDisplay}>
-                  { isSystemInfoDisplayed ? '^' : 'v' }
-                </button>
               </h2>
+              <button onClick={onToggleSystemInfoDisplay}>
+                { isSystemInfoDisplayed ? '^' : 'v' }
+              </button>
+              <span>
+                { filteredGamesBySystemId[system.id].length } games
+              </span>
               <Info show={isSystemInfoDisplayed}>
                 <Bold>Systems:</Bold>
                 {
