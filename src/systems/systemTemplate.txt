@@ -18,6 +18,7 @@ const games = [{
   receiptLocation: '',
   url: '',
   price: 0,
+  tags: [],
   extras: [],
   played: false,
   completed: false,
