@@ -83,12 +83,17 @@ const App = () => {
   const searchValues = searchValue.split(' ')
   const filteredGamesBySystemId = sortedSystems.reduce((gamesBySystemId, system) => {
     gamesBySystemId[system.id] = system.games.filter((game) => {
-      const matchesName = searchValues.every(value => game.name.toLowerCase().includes(value.toLowerCase()))
+      const matchesSearch = searchValues.every(value => {
+        const matchesName = game.name.toLowerCase().includes(value.toLowerCase())
+        const matchesTags = game.tags.some(tag => tag.toLowerCase().includes(value.toLowerCase()))
+
+        return matchesName || matchesTags
+      })
       const matchesPlayed = isPlayed === 0 ? true : game.played === buttonFilterStates[isPlayed]
       const matchesCompleted = isCompleted === 0 ? true : game.completed === buttonFilterStates[isCompleted]
       const matchesFavourite = isFavourite === 0 ? true : game.favourite === buttonFilterStates[isFavourite]
 
-      return matchesName && matchesPlayed && matchesCompleted && matchesFavourite
+      return matchesSearch && matchesPlayed && matchesCompleted && matchesFavourite
     })
 
     return gamesBySystemId
