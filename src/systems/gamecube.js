@@ -634,7 +634,6 @@ const games = [{
 export default {
   id: '909f38cf-164b-4820-a376-80303247b3de',
   name: 'GameCube',
-  index: 3,
   systems,
   cables,
   accessories,

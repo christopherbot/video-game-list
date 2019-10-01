@@ -82,7 +82,6 @@ const games = [{
 export default {
   id: 'b60de999-f860-4ca9-8ede-bdf0424e41ed',
   name: 'NES',
-  index: 0,
   systems,
   cables,
   accessories,

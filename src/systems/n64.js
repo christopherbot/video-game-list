@@ -744,7 +744,6 @@ const games = [{
 export default {
   id: 'cd1e21b6-61fd-412b-b264-d31d5c1f90c3',
   name: 'N64 (Nintendo 64)',
-  index: 2,
   systems,
   cables,
   accessories,

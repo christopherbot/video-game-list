@@ -541,7 +541,6 @@ const games = [{
 export default {
   id: 'ba66a5af-654e-4344-8cb4-aab9f8ac47a6',
   name: 'Wii',
-  index: 4,
   systems,
   cables,
   accessories,

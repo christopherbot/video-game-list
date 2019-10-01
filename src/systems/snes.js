@@ -251,7 +251,6 @@ const games = [{
 export default {
   id: '18110ff3-6b1a-485a-bfda-73e6b27d60e6',
   name: 'SNES',
-  index: 1,
   systems,
   cables,
   accessories,
