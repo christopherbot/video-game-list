@@ -10,6 +10,7 @@ const systemOrder = [
   '909f38cf-164b-4820-a376-80303247b3de', // gamecube
   'ba66a5af-654e-4344-8cb4-aab9f8ac47a6', // wii
   'cb635e03-5b31-4ce5-a399-2e471e319493', // wii u
+  '5c2c887a-3fbe-4a57-b488-6429206c3325', // switch
   '3b9dd6fa-8b04-408e-b302-50315d8daa6c', // gb
   '286e78dd-936e-4d5b-89ce-086277b0d7ce', // gba
   '4ad042aa-640b-4437-ba55-0a7226901ba3', // ds
