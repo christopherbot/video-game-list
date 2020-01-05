@@ -23,7 +23,7 @@ const games = [{
   receiptLocation: '(gmail - Best Buy)',
   url: 'https://en.wikipedia.org/wiki/Fire_Emblem:_Three_Houses',
   price: 80,
-  tags: ['fe16', '3h', 'th'],
+  tags: ['fe16', 'fe3h', 'feth', '3h', 'th'],
   extras: [],
   played: true,
   completed: false,
