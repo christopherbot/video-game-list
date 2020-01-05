@@ -30,6 +30,32 @@ const games = [{
   favourite: true,
   borrowedInFrom: '',
   borrowedOutTo: '',
+}, {
+  id: '42aa401c-f2eb-430a-be4c-b4ff81636dff',
+  name: 'The Legend of Zelda: Link\'s Awakening',
+  receiptLocation: '(Gift from Kristen)',
+  url: 'https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Link%27s_Awakening_(2019_video_game)',
+  price: 60,
+  tags: ['tloz', 'la', 'links'],
+  extras: [],
+  played: true,
+  completed: true,
+  favourite: true,
+  borrowedInFrom: '',
+  borrowedOutTo: '',
+}, {
+  id: 'c4e525ce-e2e1-47ec-affe-6382b02bf3af',
+  name: 'Pokemon Sword',
+  receiptLocation: '^',
+  url: 'https://en.wikipedia.org/wiki/Pok%C3%A9mon_Sword_and_Shield',
+  price: 80,
+  tags: [],
+  extras: [],
+  played: false,
+  completed: false,
+  favourite: false,
+  borrowedInFrom: '',
+  borrowedOutTo: '',
 }]
 
 export default {
