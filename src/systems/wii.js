@@ -58,9 +58,9 @@ const games = [{
 }, {
   id: 'a162ef01-43d0-4e67-a274-f0e37b47e329',
   name: 'Fire Emblem: Radiant Dawn',
-  receiptLocation: '',
+  receiptLocation: '^',
   url: 'https://en.wikipedia.org/wiki/Fire_Emblem:_Radiant_Dawn',
-  price: 0,
+  price: 75,
   tags: ['fe10'],
   extras: [],
   played: true,
