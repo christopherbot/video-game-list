@@ -8,7 +8,12 @@ const systems = [{
 
 const cables = ['Power', 'HDMI']
 
-const accessories = ['Dock', 'Joy-Con straps', 'Joy-Con Grip']
+const accessories = [
+  'Dock',
+  'Joy-Con straps',
+  'Joy-Con Comfort Grip',
+  'GEEKLIN Dobe Joy-Con Controller Grip x2',
+]
 
 const controllers = ['Grey Joy-Con x2']
 
