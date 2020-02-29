@@ -1,5 +1,5 @@
-import React, { Fragment, useState } from 'react'
-import styled from 'styled-components'
+import React, { useState } from 'react'
+import styled, { css } from 'styled-components'
 import GlobalStyle from './globalStyle'
 import systems from './systems'
 
@@ -25,17 +25,49 @@ const systemOrder = [
 ]
 
 const sortedSystems = systems.sort((a, b) => systemOrder.indexOf(a.id) - systemOrder.indexOf(b.id))
+const numGames = sortedSystems.map(system => system.games).flat().length
+
+const createMediaQuery = minWidth => (...args) => css`
+  @media only screen and (min-width: ${minWidth}px) { ${css(...args)} }
+`
+
+const media = {
+  smallUp: createMediaQuery(500),
+}
+
+const strikethroughUnequalValue = (x, y) => {
+  const isUnequal = x !== y
+
+  return (
+    <>
+      <span className={isUnequal ? 'strike' : ''}>
+        { x }
+      </span>
+      {' '}
+      {
+        isUnequal && ` ${y}`
+      }
+    </>
+  )
+}
 
 const Bold = styled.h4`
   margin: 0;
   font-weight: bold;
 `
 
+const BG_COLOR = "#ddeae3"
+const MARGIN = 15
+
 const Wrapper = styled.main`
   min-height: 100%;
   width: 100%;
-  padding: 50px;
-  background-color: #ddeae3;
+  padding: 35px 50px;
+  background-color: ${BG_COLOR};
+
+  h1 {
+    margin-top: 0;
+  }
 
   h2 {
     display: inline-block;
@@ -51,8 +83,78 @@ const Wrapper = styled.main`
     margin-left: 5px;
   }
 
-  button {
-    margin: 0 5px;
+  .strike {
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
+
+  .search-bar {
+    position: sticky;
+    max-width: 500px;
+    top: ${MARGIN}px;
+    padding: ${MARGIN}px;
+    background-color: #dadada;
+
+    input[type=text] {
+      display: block;
+      height: 30px;
+      width: 100%;
+      margin-bottom: ${MARGIN}px;
+      padding: 0 6px;
+    }
+
+    .top-cover {
+      position: absolute;
+      top: -${MARGIN}px;
+      left: 0;
+      height: ${MARGIN}px;
+      width: 100%;
+      background-color: ${BG_COLOR};
+    }
+
+    .bottom-cover {
+      position: absolute;
+      bottom: -${MARGIN}px;
+      left: 0;
+      height: ${MARGIN}px;
+      width: 100%;
+      background-color: ${BG_COLOR};
+    }
+  }
+
+  .search-bar-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .search-bar-buttons {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      ${media.smallUp`
+        width: unset;
+        justify-content: flex-start;
+      `}
+
+      button {
+        height: 40px;
+        padding: 0 ${MARGIN}px;
+      }
+
+      button:not(:last-child) {
+        margin-right: ${MARGIN}px;
+      }
+    }
+
+    .num-games {
+      margin-top: ${MARGIN}px;
+
+      ${media.smallUp`
+        margin-top: 0;
+      `}
+    }
   }
 `
 
@@ -121,8 +223,10 @@ const App = () => {
     return gamesBySystemId
   }, {})
 
+  const numFilteredGames = Object.values(filteredGamesBySystemId).flat().length
+
   return (
-    <Fragment>
+    <>
       <GlobalStyle />
       <Wrapper>
         <header>
@@ -130,16 +234,39 @@ const App = () => {
             Video Game List
           </h1>
         </header>
-        <input
-          type="text"
-          placeholder="Search for a game"
-          value={searchValue}
-          onChange={onSearchChange}
-        />
-        <Button state={isPlayed} onClick={onToggleIsPlayed}>Played</Button>
-        <Button state={isCompleted} onClick={onToggleIsCompleted}>Completed</Button>
-        <Button state={isFavourite} onClick={onToggleIsFavourite}>Favourite</Button>
-        { Object.values(filteredGamesBySystemId).flat().length } games
+        <nav className="search-bar">
+          <div className="top-cover" />
+          <input
+            type="text"
+            placeholder="Search for a game"
+            value={searchValue}
+            onChange={onSearchChange}
+          />
+          <div className="search-bar-row">
+            <div className="search-bar-buttons">
+              <Button state={isPlayed} onClick={onToggleIsPlayed}>
+                Played
+              </Button>
+              <Button state={isCompleted} onClick={onToggleIsCompleted}>
+                Completed
+              </Button>
+              <Button state={isFavourite} onClick={onToggleIsFavourite}>
+                Favourite
+              </Button>
+            </div>
+            <span className="num-games">
+              {
+                strikethroughUnequalValue(
+                  numGames,
+                  numFilteredGames,
+                )
+              }
+              {' '}
+              games
+            </span>
+          </div>
+          <div className="bottom-cover" />
+        </nav>
         {
           sortedSystems.map(system =>
             <article key={system.id}>
@@ -150,7 +277,14 @@ const App = () => {
                 { isSystemInfoDisplayed ? '^' : 'v' }
               </button>
               <span>
-                { filteredGamesBySystemId[system.id].length } games
+                {
+                  strikethroughUnequalValue(
+                    system.games.length,
+                    filteredGamesBySystemId[system.id].length,
+                  )
+                }
+                {' '}
+                games
               </span>
               <Info show={isSystemInfoDisplayed}>
                 <Bold>Systems:</Bold>
@@ -205,7 +339,7 @@ const App = () => {
           )
         }
       </Wrapper>
-    </Fragment>
+    </>
   )
 }
 
