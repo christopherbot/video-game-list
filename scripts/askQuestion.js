@@ -35,6 +35,10 @@ const askQuestion = (rl, question) => new Promise((resolve, reject) => {
       if (question.titleCase) {
         answer = answer[0].toUpperCase() + answer.substr(1)
       }
+
+      if (question.escapeSingleQuotes) {
+        answer = answer.replace("'", "\\'")
+      }
     }
 
     // validate booleans

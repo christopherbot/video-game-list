@@ -7,6 +7,7 @@ module.exports = [{
   label: 'Game Name',
   type: 'string',
   titleCase: true,
+  escapeSingleQuotes: true,
 }, {
   param: 'receiptLocation',
   label: 'Receipt Location',
