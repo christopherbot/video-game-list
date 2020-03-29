@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled, { css } from 'styled-components'
-import GlobalStyle from './globalStyle'
 import systems from './systems'
+import { LIGHT, DARK } from './theme'
 
 const systemOrder = [
   'b60de999-f860-4ca9-8ede-bdf0424e41ed', // nes
@@ -51,23 +51,17 @@ const strikethroughIfUnequal = (x, y) => {
   )
 }
 
-const layers = {
-  nav: 1,
-}
-
 const Bold = styled.h4`
   margin: 0;
   font-weight: bold;
 `
 
-const BG_COLOR = "#ddeae3"
 const MARGIN = 15
 
 const Wrapper = styled.main`
   min-height: 100%;
   width: 100%;
   padding: 35px 50px;
-  background-color: ${BG_COLOR};
 
   h1 {
     margin-top: 0;
@@ -106,6 +100,13 @@ const buttonColor = ({ state }) => {
 
 const Button = styled.button``
 
+const ThemeButton = styled(Button)`
+  position: fixed;
+  top: ${MARGIN}px;
+  right: ${MARGIN}px;
+  font-size: 20px;
+`
+
 const NavButton = styled(Button)`
   background-color: ${buttonColor};
   height: 40px;
@@ -113,12 +114,12 @@ const NavButton = styled(Button)`
 `
 
 const Nav = styled.nav`
-  z-index: ${layers.nav};
+  z-index: ${props => props.theme.zIndex.nav};
   position: sticky;
   max-width: 500px;
   top: ${MARGIN}px;
   padding: ${MARGIN}px;
-  background-color: #dadada;
+  background-color: ${props => props.theme.colors.nav};
 
   input[type=text] {
     display: block;
@@ -134,7 +135,7 @@ const Nav = styled.nav`
     left: 0;
     height: ${MARGIN}px;
     width: 100%;
-    background-color: ${BG_COLOR};
+    background-color: ${props => props.theme.colors.background};
   }
 
   .bottom-cover {
@@ -143,7 +144,7 @@ const Nav = styled.nav`
     left: 0;
     height: ${MARGIN}px;
     width: 100%;
-    background-color: ${BG_COLOR};
+    background-color: ${props => props.theme.colors.background};
   }
 
   .nav-row {
@@ -178,7 +179,7 @@ const buttonFilterStates = {
   2: false,
 }
 
-const App = () => {
+const App = (props) => {
   const [searchValue, setSearchValue] = useState('')
   const [isPlayed, setIsPlayed] = useState(0)
   const [isCompleted, setIsCompleted] = useState(0)
@@ -215,120 +216,120 @@ const App = () => {
   const numFilteredGames = Object.values(filteredGamesBySystemId).flat().length
 
   return (
-    <>
-      <GlobalStyle />
-      <Wrapper>
-        <header>
-          <h1>
-            Video Game List
-          </h1>
-        </header>
-        <Nav>
-          <div className="top-cover" />
-          <input
-            type="text"
-            placeholder="Search for a game"
-            value={searchValue}
-            onChange={onSearchChange}
-          />
-          <div className="nav-row">
-            <NavButton state={isPlayed} onClick={onToggleIsPlayed}>
-              Played
-            </NavButton>
-            <NavButton state={isCompleted} onClick={onToggleIsCompleted}>
-              Completed
-            </NavButton>
-            <NavButton state={isFavourite} onClick={onToggleIsFavourite}>
-              Favourite
-            </NavButton>
-          </div>
-          <div className="nav-row">
+    <Wrapper>
+      <ThemeButton onClick={() => props.setTheme(props.theme === LIGHT ? DARK : LIGHT)}>
+        { props.theme === LIGHT ? '☀️' : '🌙' }
+      </ThemeButton>
+      <header>
+        <h1>
+          Video Game List
+        </h1>
+      </header>
+      <Nav>
+        <div className="top-cover" />
+        <input
+          type="text"
+          placeholder="Search for a game"
+          value={searchValue}
+          onChange={onSearchChange}
+        />
+        <div className="nav-row">
+          <NavButton state={isPlayed} onClick={onToggleIsPlayed}>
+            Played
+          </NavButton>
+          <NavButton state={isCompleted} onClick={onToggleIsCompleted}>
+            Completed
+          </NavButton>
+          <NavButton state={isFavourite} onClick={onToggleIsFavourite}>
+            Favourite
+          </NavButton>
+        </div>
+        <div className="nav-row">
+          <span>
+            {
+              strikethroughIfUnequal(
+                numGames,
+                numFilteredGames,
+              )
+            }
+            {' '}
+            games
+          </span>
+        </div>
+        <div className="bottom-cover" />
+      </Nav>
+      {
+        sortedSystems.map(system =>
+          <article key={system.id}>
+            <h2>
+              { system.name }
+            </h2>
+            <button onClick={onToggleSystemInfoDisplay}>
+              { isSystemInfoDisplayed ? '^' : 'v' }
+            </button>
             <span>
               {
                 strikethroughIfUnequal(
-                  numGames,
-                  numFilteredGames,
+                  system.games.length,
+                  filteredGamesBySystemId[system.id].length,
                 )
               }
               {' '}
               games
             </span>
-          </div>
-          <div className="bottom-cover" />
-        </Nav>
-        {
-          sortedSystems.map(system =>
-            <article key={system.id}>
-              <h2>
-                { system.name }
-              </h2>
-              <button onClick={onToggleSystemInfoDisplay}>
-                { isSystemInfoDisplayed ? '^' : 'v' }
-              </button>
-              <span>
-                {
-                  strikethroughIfUnequal(
-                    system.games.length,
-                    filteredGamesBySystemId[system.id].length,
-                  )
-                }
-                {' '}
-                games
-              </span>
-              <Info show={isSystemInfoDisplayed}>
-                <Bold>Systems:</Bold>
-                {
-                  system.systems.map(sys =>
-                    <div key={sys.id}>
-                      { sys.description && `${sys.description} -` } { sys.color }
-                    </div>
-                  )
-                }
-                <Bold>Cables:</Bold>
-                {
-                  system.cables.map(cable =>
-                    <div key={cable}>
-                      { cable }
-                    </div>
-                  )
-                }
-                <Bold>Accessories:</Bold>
-                {
-                  system.accessories.map(accessory =>
-                    <div key={accessory}>
-                      { accessory }
-                    </div>
-                  )
-                }
-                <Bold>Controllers:</Bold>
-                {
-                  system.controllers.map(controller =>
-                    <div key={controller}>
-                      { controller }
-                    </div>
-                  )
-                }
-              </Info>
+            <Info show={isSystemInfoDisplayed}>
+              <Bold>Systems:</Bold>
               {
-                filteredGamesBySystemId[system.id].map(game =>
-                  <div key={game.id}>
-                    <span>
-                      { game.name }
-                    </span>
-                    <a href={game.url} target="_blank" rel="noopener noreferrer">
-                      🔗
-                    </a>
-                    { game.played && <PlayIcon /> }
-                    { game.completed && <CompletedIcon /> }
-                    { game.favourite && <FavouriteIcon /> }
+                system.systems.map(sys =>
+                  <div key={sys.id}>
+                    { sys.description && `${sys.description} -` } { sys.color }
                   </div>
                 )
               }
-            </article>,
-          )
-        }
-      </Wrapper>
-    </>
+              <Bold>Cables:</Bold>
+              {
+                system.cables.map(cable =>
+                  <div key={cable}>
+                    { cable }
+                  </div>
+                )
+              }
+              <Bold>Accessories:</Bold>
+              {
+                system.accessories.map(accessory =>
+                  <div key={accessory}>
+                    { accessory }
+                  </div>
+                )
+              }
+              <Bold>Controllers:</Bold>
+              {
+                system.controllers.map(controller =>
+                  <div key={controller}>
+                    { controller }
+                  </div>
+                )
+              }
+            </Info>
+            {
+              filteredGamesBySystemId[system.id].map(game =>
+                <div key={game.id}>
+                  <span>
+                    { game.name }
+                  </span>
+                  <a href={game.url} target="_blank" rel="noopener noreferrer">
+                    🔗
+                  </a>
+                  { game.played && <PlayIcon /> }
+                  { game.completed && <CompletedIcon /> }
+                  { game.favourite && <FavouriteIcon /> }
+                </div>
+              )
+            }
+          </article>,
+        )
+      }
+    </Wrapper>
   )
 }
 

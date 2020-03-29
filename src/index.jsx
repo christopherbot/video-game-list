@@ -1,9 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './app'
+import MainApp from './mainApp'
 
 const rootElement = document.querySelector('#main-canvas')
 
-const renderApplication = () => ReactDOM.render(<App />, rootElement)
+const renderApplication = () => ReactDOM.render(
+  <MainApp />,
+  rootElement,
+)
 
 renderApplication()
