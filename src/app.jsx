@@ -35,18 +35,18 @@ const media = {
   smallUp: createMediaQuery(500),
 }
 
-const strikethroughUnequalValue = (x, y) => {
-  const isUnequal = x !== y
+const strikethroughIfUnequal = (x, y) => {
+  if (x === y) {
+    return x
+  }
 
   return (
     <>
-      <span className={isUnequal ? 'strike' : ''}>
+      <span className="strike">
         { x }
       </span>
       {' '}
-      {
-        isUnequal && ` ${y}`
-      }
+      { y }
     </>
   )
 }
@@ -245,7 +245,7 @@ const App = () => {
           <div className="nav-row">
             <span>
               {
-                strikethroughUnequalValue(
+                strikethroughIfUnequal(
                   numGames,
                   numFilteredGames,
                 )
@@ -267,7 +267,7 @@ const App = () => {
               </button>
               <span>
                 {
-                  strikethroughUnequalValue(
+                  strikethroughIfUnequal(
                     system.games.length,
                     filteredGamesBySystemId[system.id].length,
                   )
