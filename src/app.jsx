@@ -51,6 +51,10 @@ const strikethroughUnequalValue = (x, y) => {
   )
 }
 
+const layers = {
+  nav: 1,
+}
+
 const Bold = styled.h4`
   margin: 0;
   font-weight: bold;
@@ -158,6 +162,10 @@ const Wrapper = styled.main`
   }
 `
 
+const Nav = styled.nav`
+  z-index: ${layers.nav};
+`
+
 const Info = styled.div`
   transition: max-height 400ms ease;
   max-height: ${props => props.show ? '500px' : 0};
@@ -234,7 +242,7 @@ const App = () => {
             Video Game List
           </h1>
         </header>
-        <nav className="search-bar">
+        <Nav className="search-bar">
           <div className="top-cover" />
           <input
             type="text"
@@ -266,7 +274,7 @@ const App = () => {
             </span>
           </div>
           <div className="bottom-cover" />
-        </nav>
+        </Nav>
         {
           sortedSystems.map(system =>
             <article key={system.id}>
