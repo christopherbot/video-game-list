@@ -69,11 +69,6 @@ const Wrapper = styled.main`
     display: inline-block;
   }
 
-  p {
-    margin-top: 0;
-    color: #444;
-  }
-
   a {
     text-decoration: none;
     margin-left: 5px;
