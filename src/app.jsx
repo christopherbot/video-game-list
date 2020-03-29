@@ -56,8 +56,6 @@ const Bold = styled.h4`
   font-weight: bold;
 `
 
-const MARGIN = 15
-
 const Wrapper = styled.main`
   min-height: 100%;
   width: 100%;
@@ -102,47 +100,47 @@ const Button = styled.button``
 
 const ThemeButton = styled(Button)`
   position: fixed;
-  top: ${MARGIN}px;
-  right: ${MARGIN}px;
+  top: ${props => props.theme.spacing.default}px;
+  right: ${props => props.theme.spacing.default}px;
   font-size: 20px;
 `
 
 const NavButton = styled(Button)`
   background-color: ${buttonColor};
   height: 40px;
-  padding: 0 ${MARGIN}px;
+  padding: 0 ${props => props.theme.spacing.default}px;
 `
 
 const Nav = styled.nav`
   z-index: ${props => props.theme.zIndex.nav};
   position: sticky;
   max-width: 500px;
-  top: ${MARGIN}px;
-  padding: ${MARGIN}px;
+  top: ${props => props.theme.spacing.default}px;
+  padding: ${props => props.theme.spacing.default}px;
   background-color: ${props => props.theme.colors.nav};
 
   input[type=text] {
     display: block;
     height: 30px;
     width: 100%;
-    margin-bottom: ${MARGIN}px;
+    margin-bottom: ${props => props.theme.spacing.default}px;
     padding: 0 6px;
   }
 
   .top-cover {
     position: absolute;
-    top: -${MARGIN}px;
+    top: -${props => props.theme.spacing.default}px;
     left: 0;
-    height: ${MARGIN}px;
+    height: ${props => props.theme.spacing.default}px;
     width: 100%;
     background-color: ${props => props.theme.colors.background};
   }
 
   .bottom-cover {
     position: absolute;
-    bottom: -${MARGIN}px;
+    bottom: -${props => props.theme.spacing.default}px;
     left: 0;
-    height: ${MARGIN}px;
+    height: ${props => props.theme.spacing.default}px;
     width: 100%;
     background-color: ${props => props.theme.colors.background};
   }
@@ -155,11 +153,11 @@ const Nav = styled.nav`
   }
 
   .nav-row ~ .nav-row {
-    margin-top: ${MARGIN}px;
+    margin-top: ${props => props.theme.spacing.default}px;
   }
 
   ${NavButton}:not(:last-child) {
-    margin-right: ${MARGIN}px;
+    margin-right: ${props => props.theme.spacing.default}px;
   }
 `
 

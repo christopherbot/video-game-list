@@ -1,10 +1,17 @@
+const spacing = {
+  default: 15,
+}
+
 const zIndex = {
   nav: 1,
 }
 
+
 const baseTheme = {
+  spacing,
   zIndex,
 }
+
 
 const lightTheme = {
   ...baseTheme,
