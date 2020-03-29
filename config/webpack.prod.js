@@ -12,7 +12,7 @@ module.exports = merge(common, {
 
   output: {
     filename: '[name].[hash].js',
-    chunkFilename: '[name].js',
+    chunkFilename: '[name].[chunkhash].js',
     path: paths.dist,
   },
 

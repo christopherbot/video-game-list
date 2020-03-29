@@ -25,7 +25,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Chris\' VGL',
       template: paths.app.template,
-      chunks: ['app'],
+      chunks: [
+        'vendor',
+        'app',
+      ],
+      chunksSortMode: 'manual',
       filename: paths.app.htmlOutput,
     }),
   ],
