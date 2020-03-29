@@ -80,18 +80,20 @@ const Wrapper = styled.main`
   }
 `
 
-const buttonColor = ({ state }) => {
+const buttonColor = ({ theme, state }) => {
   switch (state) {
     case 1:
-      return 'green'
+      return theme.colors.navButtonOn
     case 2:
-      return 'red'
+      return theme.colors.navButtonOff
     default:
-      return 'grey'
+      return theme.colors.navButton
   }
 }
 
-const Button = styled.button``
+const Button = styled.button`
+  cursor: pointer;
+`
 
 const ThemeButton = styled(Button)`
   position: fixed;

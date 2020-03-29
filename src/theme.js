@@ -1,3 +1,9 @@
+const colors = {
+  navButton: '#929292',
+  navButtonOn: '#18b518',
+  navButtonOff: '#e43f00',
+}
+
 const spacing = {
   default: 15,
 }
@@ -16,6 +22,7 @@ const baseTheme = {
 const lightTheme = {
   ...baseTheme,
   colors: {
+    ...colors,
     background: '#fff',
     nav: '#dadada',
     text: '#000'
@@ -25,6 +32,7 @@ const lightTheme = {
 const darkTheme = {
   ...baseTheme,
   colors: {
+    ...colors,
     background: '#000',
     nav: '#333',
     text: '#fff',
