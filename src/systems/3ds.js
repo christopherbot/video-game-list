@@ -149,7 +149,7 @@ const games = [{
   price: 50,
   tags: ['eox'],
   extras: [],
-  played: false,
+  played: true,
   completed: false,
   favourite: false,
   borrowedInFrom: '',
