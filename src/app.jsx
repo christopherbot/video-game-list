@@ -91,90 +91,7 @@ const Wrapper = styled.main`
     text-decoration: line-through;
     opacity: 0.5;
   }
-
-  .search-bar {
-    position: sticky;
-    max-width: 500px;
-    top: ${MARGIN}px;
-    padding: ${MARGIN}px;
-    background-color: #dadada;
-
-    input[type=text] {
-      display: block;
-      height: 30px;
-      width: 100%;
-      margin-bottom: ${MARGIN}px;
-      padding: 0 6px;
-    }
-
-    .top-cover {
-      position: absolute;
-      top: -${MARGIN}px;
-      left: 0;
-      height: ${MARGIN}px;
-      width: 100%;
-      background-color: ${BG_COLOR};
-    }
-
-    .bottom-cover {
-      position: absolute;
-      bottom: -${MARGIN}px;
-      left: 0;
-      height: ${MARGIN}px;
-      width: 100%;
-      background-color: ${BG_COLOR};
-    }
-  }
-
-  .search-bar-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-    .search-bar-buttons {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-
-      ${media.smallUp`
-        width: unset;
-        justify-content: flex-start;
-      `}
-
-      button {
-        height: 40px;
-        padding: 0 ${MARGIN}px;
-      }
-
-      button:not(:last-child) {
-        margin-right: ${MARGIN}px;
-      }
-    }
-
-    .num-games {
-      margin-top: ${MARGIN}px;
-
-      ${media.smallUp`
-        margin-top: 0;
-      `}
-    }
-  }
 `
-
-const Nav = styled.nav`
-  z-index: ${layers.nav};
-`
-
-const Info = styled.div`
-  transition: max-height 400ms ease;
-  max-height: ${props => props.show ? '500px' : 0};
-  overflow: hidden;
-`
-
-const PlayIcon = styled.span.attrs({ children: '▶' })` color: navy;`
-const CompletedIcon = styled.span.attrs({ children: '✓' })` color: green;`
-const FavouriteIcon = styled.span.attrs({ children: '✰' })` color: gold;`
 
 const buttonColor = ({ state }) => {
   switch (state) {
@@ -187,9 +104,73 @@ const buttonColor = ({ state }) => {
   }
 }
 
-const Button = styled.button`
+const Button = styled.button``
+
+const NavButton = styled(Button)`
   background-color: ${buttonColor};
+  height: 40px;
+  padding: 0 ${MARGIN}px;
 `
+
+const Nav = styled.nav`
+  z-index: ${layers.nav};
+  position: sticky;
+  max-width: 500px;
+  top: ${MARGIN}px;
+  padding: ${MARGIN}px;
+  background-color: #dadada;
+
+  input[type=text] {
+    display: block;
+    height: 30px;
+    width: 100%;
+    margin-bottom: ${MARGIN}px;
+    padding: 0 6px;
+  }
+
+  .top-cover {
+    position: absolute;
+    top: -${MARGIN}px;
+    left: 0;
+    height: ${MARGIN}px;
+    width: 100%;
+    background-color: ${BG_COLOR};
+  }
+
+  .bottom-cover {
+    position: absolute;
+    bottom: -${MARGIN}px;
+    left: 0;
+    height: ${MARGIN}px;
+    width: 100%;
+    background-color: ${BG_COLOR};
+  }
+
+  .nav-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .nav-row ~ .nav-row {
+    margin-top: ${MARGIN}px;
+  }
+
+  ${NavButton}:not(:last-child) {
+    margin-right: ${MARGIN}px;
+  }
+`
+
+const Info = styled.div`
+  transition: max-height 400ms ease;
+  max-height: ${props => props.show ? '500px' : 0};
+  overflow: hidden;
+`
+
+const PlayIcon = styled.span.attrs({ children: '▶' })` color: navy;`
+const CompletedIcon = styled.span.attrs({ children: '✓' })` color: green;`
+const FavouriteIcon = styled.span.attrs({ children: '✰' })` color: gold;`
 
 const buttonFilterStates = {
   0: null,
@@ -242,7 +223,7 @@ const App = () => {
             Video Game List
           </h1>
         </header>
-        <Nav className="search-bar">
+        <Nav>
           <div className="top-cover" />
           <input
             type="text"
@@ -250,19 +231,19 @@ const App = () => {
             value={searchValue}
             onChange={onSearchChange}
           />
-          <div className="search-bar-row">
-            <div className="search-bar-buttons">
-              <Button state={isPlayed} onClick={onToggleIsPlayed}>
-                Played
-              </Button>
-              <Button state={isCompleted} onClick={onToggleIsCompleted}>
-                Completed
-              </Button>
-              <Button state={isFavourite} onClick={onToggleIsFavourite}>
-                Favourite
-              </Button>
-            </div>
-            <span className="num-games">
+          <div className="nav-row">
+            <NavButton state={isPlayed} onClick={onToggleIsPlayed}>
+              Played
+            </NavButton>
+            <NavButton state={isCompleted} onClick={onToggleIsCompleted}>
+              Completed
+            </NavButton>
+            <NavButton state={isFavourite} onClick={onToggleIsFavourite}>
+              Favourite
+            </NavButton>
+          </div>
+          <div className="nav-row">
+            <span>
               {
                 strikethroughUnequalValue(
                   numGames,
