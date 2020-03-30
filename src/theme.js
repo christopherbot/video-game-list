@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 const colors = {
   navButton: '#929292',
   navButtonOn: '#18b518',
@@ -48,3 +50,22 @@ const themes = {
 }
 
 export default themes
+
+const APP_THEME_STORAGE_KEY = 'chrisVgl:theme'
+export const useTheme = (initialTheme) => {
+  const [currentTheme, setTheme] = useState(
+    initialTheme ||
+    localStorage.getItem(APP_THEME_STORAGE_KEY) ||
+    LIGHT
+  )
+
+  const setAndStoreTheme = (newTheme) => {
+    setTheme(newTheme)
+    localStorage.setItem(APP_THEME_STORAGE_KEY, newTheme)
+  }
+
+  return [
+    currentTheme,
+    setAndStoreTheme,
+  ]
+}
