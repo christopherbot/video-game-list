@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import styled, { css } from 'styled-components'
 import systems from './systems'
 import { LIGHT, DARK } from './theme'
+import ThemeButton from './components/buttons/themeButton'
+import FilterButton from './components/buttons/filterButton'
 
 const systemOrder = [
   'b60de999-f860-4ca9-8ede-bdf0424e41ed', // nes
@@ -80,34 +82,6 @@ const Wrapper = styled.main`
   }
 `
 
-const buttonColor = ({ theme, state }) => {
-  switch (state) {
-    case 1:
-      return theme.colors.navButtonOn
-    case 2:
-      return theme.colors.navButtonOff
-    default:
-      return theme.colors.navButton
-  }
-}
-
-const Button = styled.button`
-  cursor: pointer;
-`
-
-const ThemeButton = styled(Button)`
-  position: fixed;
-  top: ${props => props.theme.spacing.default}px;
-  right: ${props => props.theme.spacing.default}px;
-  font-size: 20px;
-`
-
-const NavButton = styled(Button)`
-  background-color: ${buttonColor};
-  height: 40px;
-  padding: 0 ${props => props.theme.spacing.default}px;
-`
-
 const Nav = styled.nav`
   z-index: ${props => props.theme.zIndex.nav};
   position: sticky;
@@ -153,7 +127,7 @@ const Nav = styled.nav`
     margin-top: ${props => props.theme.spacing.default}px;
   }
 
-  ${NavButton}:not(:last-child) {
+  ${FilterButton}:not(:last-child) {
     margin-right: ${props => props.theme.spacing.default}px;
   }
 `
@@ -168,23 +142,23 @@ const PlayIcon = styled.span.attrs({ children: '▶' })` color: navy;`
 const CompletedIcon = styled.span.attrs({ children: '✓' })` color: green;`
 const FavouriteIcon = styled.span.attrs({ children: '✰' })` color: gold;`
 
-const buttonFilterStates = {
+const FILTER_STATES = {
   0: null,
   1: true,
   2: false,
 }
+const numFilterStates = Object.keys(FILTER_STATES).length
 
 const App = (props) => {
   const [searchValue, setSearchValue] = useState('')
+  const onSearchChange = ({ target }) => setSearchValue(target.value)
+
   const [isPlayed, setIsPlayed] = useState(0)
   const [isCompleted, setIsCompleted] = useState(0)
   const [isFavourite, setIsFavourite] = useState(0)
-
-  const onSearchChange = ({ target }) => setSearchValue(target.value)
-
-  const onToggleIsPlayed = () => setIsPlayed((isPlayed + 1) % Object.keys(buttonFilterStates).length)
-  const onToggleIsCompleted = () => setIsCompleted((isCompleted + 1) % Object.keys(buttonFilterStates).length)
-  const onToggleIsFavourite = () => setIsFavourite((isFavourite + 1) % Object.keys(buttonFilterStates).length)
+  const onToggleIsPlayed = () => setIsPlayed((isPlayed + 1) % numFilterStates)
+  const onToggleIsCompleted = () => setIsCompleted((isCompleted + 1) % numFilterStates)
+  const onToggleIsFavourite = () => setIsFavourite((isFavourite + 1) % numFilterStates)
 
   const [isSystemInfoDisplayed, setIsSystemInfoDisplayed] = useState(false)
   const onToggleSystemInfoDisplay = () => setIsSystemInfoDisplayed(!isSystemInfoDisplayed)
@@ -198,9 +172,9 @@ const App = (props) => {
 
         return matchesName || matchesTags
       })
-      const matchesPlayed = isPlayed === 0 ? true : game.played === buttonFilterStates[isPlayed]
-      const matchesCompleted = isCompleted === 0 ? true : game.completed === buttonFilterStates[isCompleted]
-      const matchesFavourite = isFavourite === 0 ? true : game.favourite === buttonFilterStates[isFavourite]
+      const matchesPlayed = isPlayed === 0 ? true : game.played === FILTER_STATES[isPlayed]
+      const matchesCompleted = isCompleted === 0 ? true : game.completed === FILTER_STATES[isCompleted]
+      const matchesFavourite = isFavourite === 0 ? true : game.favourite === FILTER_STATES[isFavourite]
 
       return matchesSearch && matchesPlayed && matchesCompleted && matchesFavourite
     })
@@ -229,15 +203,15 @@ const App = (props) => {
           onChange={onSearchChange}
         />
         <div className="nav-row">
-          <NavButton state={isPlayed} onClick={onToggleIsPlayed}>
+          <FilterButton state={isPlayed} onClick={onToggleIsPlayed}>
             Played
-          </NavButton>
-          <NavButton state={isCompleted} onClick={onToggleIsCompleted}>
+          </FilterButton>
+          <FilterButton state={isCompleted} onClick={onToggleIsCompleted}>
             Completed
-          </NavButton>
-          <NavButton state={isFavourite} onClick={onToggleIsFavourite}>
+          </FilterButton>
+          <FilterButton state={isFavourite} onClick={onToggleIsFavourite}>
             Favourite
-          </NavButton>
+          </FilterButton>
         </div>
         <div className="nav-row">
           <span>

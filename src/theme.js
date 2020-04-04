@@ -1,9 +1,9 @@
 import { useState } from 'react'
 
 const colors = {
-  navButton: '#929292',
-  navButtonOn: '#18b518',
-  navButtonOff: '#e43f00',
+  filterButton: '#929292',
+  filterButtonOn: '#18b518',
+  filterButtonOff: '#e43f00',
 }
 
 const spacing = {
