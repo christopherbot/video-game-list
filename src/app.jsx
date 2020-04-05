@@ -4,6 +4,7 @@ import systems from './systems'
 import { LIGHT, DARK } from './theme'
 import ThemeButton from './components/buttons/themeButton'
 import FilterButton from './components/buttons/filterButton'
+import SystemInfo from './components/systemInfo'
 
 const systemOrder = [
   'b60de999-f860-4ca9-8ede-bdf0424e41ed', // nes
@@ -52,11 +53,6 @@ const strikethroughIfUnequal = (x, y) => {
     </>
   )
 }
-
-const Bold = styled.h4`
-  margin: 0;
-  font-weight: bold;
-`
 
 const Wrapper = styled.main`
   min-height: 100%;
@@ -130,12 +126,6 @@ const Nav = styled.nav`
   ${FilterButton}:not(:last-child) {
     margin-right: ${props => props.theme.spacing.default}px;
   }
-`
-
-const Info = styled.div`
-  transition: max-height 400ms ease;
-  max-height: ${props => props.show ? '500px' : 0};
-  overflow: hidden;
 `
 
 const PlayIcon = styled.span.attrs({ children: '▶' })` color: navy;`
@@ -246,40 +236,10 @@ const App = (props) => {
               {' '}
               games
             </span>
-            <Info show={isSystemInfoDisplayed}>
-              <Bold>Systems:</Bold>
-              {
-                system.systems.map(sys =>
-                  <div key={sys.id}>
-                    { sys.description && `${sys.description} -` } { sys.color }
-                  </div>
-                )
-              }
-              <Bold>Cables:</Bold>
-              {
-                system.cables.map(cable =>
-                  <div key={cable}>
-                    { cable }
-                  </div>
-                )
-              }
-              <Bold>Accessories:</Bold>
-              {
-                system.accessories.map(accessory =>
-                  <div key={accessory}>
-                    { accessory }
-                  </div>
-                )
-              }
-              <Bold>Controllers:</Bold>
-              {
-                system.controllers.map(controller =>
-                  <div key={controller}>
-                    { controller }
-                  </div>
-                )
-              }
-            </Info>
+            <SystemInfo
+              show={isSystemInfoDisplayed}
+              system={system}
+            />
             {
               filteredGamesBySystemId[system.id].map(game =>
                 <div key={game.id}>
