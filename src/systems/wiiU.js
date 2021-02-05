@@ -15,9 +15,9 @@ const controllers = ['Gamepad']
 const games = [{
   id: '4109b0dc-37a0-425c-af56-c99fb9d0e73d',
   name: 'The Legend of Zelda: Breath of the Wild',
-  receiptLocation: '',
+  receiptLocation: '(Amazon)',
   url: 'https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Breath_of_the_Wild',
-  price: 0,
+  price: 65,
   tags: ['tloz', 'botw'],
   extras: [],
   played: true,
@@ -41,9 +41,9 @@ const games = [{
 }, {
   id: '28bc58be-a3a8-4535-9841-84b888c37a29',
   name: 'Xenoblade Chronicles X',
-  receiptLocation: '',
+  receiptLocation: '(Amazon)',
   url: 'https://en.wikipedia.org/wiki/Xenoblade_Chronicles_X',
-  price: 0,
+  price: 20,
   tags: [],
   extras: [],
   played: true,

@@ -23,6 +23,7 @@ const systemOrder = [
   '85b6c75e-6101-4e51-9e17-07e6beecffb5', // ps3
   '9586b04a-3d6b-4af9-972c-dfdc0f610d52', // ps4
   'd9491814-d564-49cc-b299-ef8da1a19ea8', // psp
+  '85fec36e-276c-4f27-b698-c0e8976e4afc', // xbox 360
   '37ac7333-b2ec-4748-bf59-d263200cf9a0', // dreamcast
   '9dae8f3f-1de4-407e-9c68-b54dd7950199', // pc
 ]
